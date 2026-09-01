@@ -1,2 +1,2 @@
-# Puku Editor QA
+# Puku QA
 
