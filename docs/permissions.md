@@ -27,7 +27,7 @@ When more than one rule matches a tool call, puku-cli resolves them in this orde
 
 In short: `deny > allow > ask > defaultMode`.
 
-![Permission evaluation](./assets/permission-evaluation.gif)
+<img src="./assets/permission-evaluation.gif" alt="Permission evaluation" width="100%" />
 
 `shadowedRuleDetection.ts` will warn you when a later rule in the same list is unreachable because a broader earlier rule already matched.
 
@@ -66,7 +66,7 @@ The `workspace` tab lets you grant puku-cli access to directories outside the cu
 
 A rule string has the form `ToolName` or `ToolName(content)`. The parser splits on the **first unescaped `(`**, so everything before it is the tool name and everything inside the parens is the rule content (tool-specific).
 
-![Rule anatomy](./assets/rule-anatomy.gif)
+<img src="./assets/rule-anatomy.gif" alt="Rule anatomy" width="100%" />
 
 This diagram only illustrates the `ToolName(content)` shape. It does not describe additional matching behavior.
 
@@ -145,7 +145,7 @@ Rules live in JSON settings files. There are **three scopes**, plus CLI flags:
 
 Source precedence at session start is **policy → user → project → local → CLI flags** (later sources override earlier ones for the same rule, though deny always wins at runtime).
 
-![Configuration precedence](./assets/configuration-precedence.gif)
+<img src="./assets/configuration-precedence.gif" alt="Configuration precedence" width="100%" />
 
 `/permissions` writes to whichever scope you currently have selected in the write flow. When you add a rule through the interactive UI, the most common target is the **local** scope (`settings.local.json`) so the change stays on your machine and doesn't leak to teammates via git.
 
