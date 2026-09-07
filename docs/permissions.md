@@ -27,16 +27,7 @@ When more than one rule matches a tool call, puku-cli resolves them in this orde
 
 In short: `deny > allow > ask > defaultMode`.
 
-```mermaid
-flowchart TD
-  A[Tool call] --> B{Deny rule matches?}
-  B -->|Yes| C[Block]
-  B -->|No| D{Allow rule matches?}
-  D -->|Yes| E[Execute]
-  D -->|No| F{Ask rule matches?}
-  F -->|Yes| G[Prompt user]
-  F -->|No| H[defaultMode]
-```
+![Permission evaluation](./assets/permission-evaluation.gif)
 
 `shadowedRuleDetection.ts` will warn you when a later rule in the same list is unreachable because a broader earlier rule already matched.
 
@@ -75,10 +66,7 @@ The `workspace` tab lets you grant puku-cli access to directories outside the cu
 
 A rule string has the form `ToolName` or `ToolName(content)`. The parser splits on the **first unescaped `(`**, so everything before it is the tool name and everything inside the parens is the rule content (tool-specific).
 
-```mermaid
-flowchart LR
-  A["Tool name<br/>Bash"] --> B["Content inside parens<br/>git push origin main"]
-```
+![Rule anatomy](./assets/rule-anatomy.gif)
 
 This diagram only illustrates the `ToolName(content)` shape. It does not describe additional matching behavior.
 
@@ -157,13 +145,7 @@ Rules live in JSON settings files. There are **three scopes**, plus CLI flags:
 
 Source precedence at session start is **policy → user → project → local → CLI flags** (later sources override earlier ones for the same rule, though deny always wins at runtime).
 
-```mermaid
-flowchart LR
-  P["Policy<br/>OS-managed read-only"] --> U["User<br/>~/.puku-cli/settings.json"]
-  U --> R["Project<br/>.puku-cli/settings.json"]
-  R --> L["Local<br/>.puku-cli/settings.local.json"]
-  L --> C["CLI flags"]
-```
+![Configuration precedence](./assets/configuration-precedence.gif)
 
 `/permissions` writes to whichever scope you currently have selected in the write flow. When you add a rule through the interactive UI, the most common target is the **local** scope (`settings.local.json`) so the change stays on your machine and doesn't leak to teammates via git.
 
