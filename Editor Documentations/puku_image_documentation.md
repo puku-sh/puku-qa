@@ -48,9 +48,7 @@ The updated Puku Chat panel includes dedicated controls for attaching and managi
 
 Here is how Puku processes image uploads and passes them into the multimodal AI context stream:
 
-```
 ![Image Upload Technical Architecture Flow](images/technical_architecture.png)
-```
 
 ---
 
