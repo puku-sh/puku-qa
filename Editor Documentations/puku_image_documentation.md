@@ -49,34 +49,8 @@ The updated Puku Chat panel includes dedicated controls for attaching and managi
 Here is how Puku processes image uploads and passes them into the multimodal AI context stream:
 
 ```
-+------------------------+
-| User Desktop /         |
-| File Explorer          |
-+------------------------+
-            |
-            | 1. Select / Drag & Drop / Paste
-            v
-+------------------------+
-| Puku Chat Input        |
-| (UI Attachment Buffer) |
-+------------------------+
-            |
-            | 2. Base64 Encoding & Optimization
-            v
-+------------------------+        3. Combined Context
-| Puku Context Engine    | ----------------------------------+
-| (@context & /skills)   |                                   |
-+------------------------+                                   v
-                                                 +-----------------------+
-                                                 | PUKU-AI Engine        |
-                                                 | (puku 2.8 / opus 4.8) |
-                                                 +-----------------------+
-                                                             |
-                                                             | 4. Generates Code/Fix
-                                                             v
-                                                 +-----------------------+
-                                                 | Editor Workspace      |
-                                                 +-----------------------+
+![Image Upload Technical Architecture Flow](images/technical_architecture.png)
+*Technical workflow architecture of the Image Upload feature in Puku Editor.*
 ```
 
 ---
