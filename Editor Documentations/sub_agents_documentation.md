@@ -65,26 +65,7 @@ Sub-agents are configured using Markdown files with a YAML frontmatter header. T
 
 Sub-agents are configured using Markdown files stored in `.puku/agents/`. Each definition combines a YAML frontmatter header with structured system instructions.
 
-```mermaid
-graph TD
-    subgraph Config [security-auditor.md Configuration Spec]
-        direction TB
-        subgraph Frontmatter [YAML Metadata Header]
-            A["name: security-auditor"]
-            B["description: Scans code for vulnerabilities"]
-            C["model: claude-3-7-sonnet"]
-            D["tools: read_file, run_terminal, search_workspace"]
-        end
-
-        subgraph SystemPrompt [System Instructions]
-            E["# Role & Responsibilities"]
-            F["# Workflow Instructions"]
-            G["# Output Format Checklist"]
-        end
-    end
-
-    style Frontmatter fill:#1e293b,stroke:#3b82f6,color:#fff
-    style SystemPrompt fill:#0f172a,stroke:#10b981,color:#fff
+![Sub-Agent Configuration Structure](images/config_spec_diagram.png)
 ```
 
 ---
