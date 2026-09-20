@@ -53,6 +53,7 @@ Sub-agents can be defined either **Project-wide** (version-controlled with your 
 * **Project-level:** Place in `.puku/agents/` at the root of your project repository.
 * **Global-level:** Place in `~/.puku/agents/` in your user home directory.
 
+
 ---
 
 ## Configuration Spec
@@ -61,11 +62,32 @@ Sub-agents are configured using Markdown files with a YAML frontmatter header. T
 
 ### Example: `.puku/agents/security-auditor.md`
 
-## Configuration Spec
+```markdown
+---
+name: security-auditor
+description: Scans code for security vulnerabilities, OWASP Top 10 risks, and unsafe dependencies.
+model: claude-3-7-sonnet
+tools:
+  - read_file
+  - run_terminal
+  - search_workspace
+user-invocable: false
+---
 
-Sub-agents are configured using Markdown files stored in `.puku/agents/`. Each definition combines a YAML frontmatter header with structured system instructions.
+# Role & Responsibilities
+You are an elite application security auditor. Your job is to analyze code changes for vulnerabilities including SQL injection, XSS, insecure authorization, and hardcoded secrets.
 
-![Sub-Agent Configuration Structure](images/config_spec_diagram.png)
+# Workflow Instructions
+1. Inspect the target files specified in the prompt using `read_file`.
+2. Run safety scanners or linters via `run_terminal` if available.
+3. Formulate a structured vulnerability report.
+
+# Output Format
+Provide output strictly formatted as follows:
+- **Vulnerability:** [Name]
+- **Severity:** [Critical / High / Medium / Low]
+- **Location:** `[file:line]`
+- **Remediation:** [Code block showing fix]
 ```
 
 ---
@@ -81,6 +103,7 @@ Sub-agents are configured using Markdown files stored in `.puku/agents/`. Each d
 | `user-invocable` | `boolean` | `true` | If `false`, hides agent from the picker so it can only be invoked by the main agent. |
 
 ---
+
 ## Invoking Sub-Agents
 
 You can manually trigger any sub-agent in your project by typing `@` in the Puku chat panel to bring up the agent selector menu.
