@@ -22,10 +22,10 @@ As projects scale, providing an AI agent with full repository context and contin
 * **Custom Model Assignment:** Assign specific models (e.g., faster models for simple tasks, highly analytical models for architecture reviews) to specific roles.
 
 Before:
-![Context Isolation Comparison](before.png)
+![Context Isolation Comparison](images/before.png)
 
 After:
-![Context Isolation Comparison](after.png)
+![Context Isolation Comparison](images/after.png)
 
 
 ---
@@ -34,7 +34,7 @@ After:
 
 When you request a complex task, Puku's main orchestrator delegates sub-tasks to worker agents. Each sub-agent processes its assigned task autonomously and returns a synthesized result back to the main thread.  
 
-![Sub-Agent Workflow Sequence](parallel_task.png)
+![Sub-Agent Workflow Sequence](images/parallel_task.png)
 
 ```
 
@@ -46,7 +46,7 @@ Sub-agents can be defined either **Project-wide** (version-controlled with your 
 
 ### Directory Structure
 
-![Project Directory Structure](directory_tree.png)
+![Sub-Agent project project directory](images/directory_tree.png)
 
 ```
 
@@ -106,7 +106,7 @@ Provide output strictly formatted as follows:
 
 You can manually trigger any sub-agent in your project by typing `@` in the Puku chat panel to bring up the agent selector menu.
 
-![Sub-Agent Selection Dropdown](dropdown.png)
+![Sub-Agent Selection Dropdown](images/dropdown.png)
 ## Delegation Mechanics & Parallelism
 
 Sub-agents work best when assigned non-overlapping responsibilities. You can trigger sub-agents manually by typing `@sub-agent-name` in the chat, or allow Puku to auto-route tasks based on the sub-agent's `description`.
