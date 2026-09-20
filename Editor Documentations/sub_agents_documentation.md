@@ -61,32 +61,30 @@ Sub-agents are configured using Markdown files with a YAML frontmatter header. T
 
 ### Example: `.puku/agents/security-auditor.md`
 
-```markdown
----
-name: security-auditor
-description: Scans code for security vulnerabilities, OWASP Top 10 risks, and unsafe dependencies.
-model: claude-3-7-sonnet
-tools:
-  - read_file
-  - run_terminal
-  - search_workspace
-user-invocable: false
----
+## Configuration Spec
 
-# Role & Responsibilities
-You are an elite application security auditor. Your job is to analyze code changes for vulnerabilities including SQL injection, XSS, insecure authorization, and hardcoded secrets.
+Sub-agents are configured using Markdown files stored in `.puku/agents/`. Each definition combines a YAML frontmatter header with structured system instructions.
 
-# Workflow Instructions
-1. Inspect the target files specified in the prompt using `read_file`.
-2. Run safety scanners or linters via `run_terminal` if available.
-3. Formulate a structured vulnerability report.
+```mermaid
+graph TD
+    subgraph Config [security-auditor.md Configuration Spec]
+        direction TB
+        subgraph Frontmatter [YAML Metadata Header]
+            A["name: security-auditor"]
+            B["description: Scans code for vulnerabilities"]
+            C["model: claude-3-7-sonnet"]
+            D["tools: read_file, run_terminal, search_workspace"]
+        end
 
-# Output Format
-Provide output strictly formatted as follows:
-- **Vulnerability:** [Name]
-- **Severity:** [Critical / High / Medium / Low]
-- **Location:** `[file:line]`
-- **Remediation:** [Code block showing fix]
+        subgraph SystemPrompt [System Instructions]
+            E["# Role & Responsibilities"]
+            F["# Workflow Instructions"]
+            G["# Output Format Checklist"]
+        end
+    end
+
+    style Frontmatter fill:#1e293b,stroke:#3b82f6,color:#fff
+    style SystemPrompt fill:#0f172a,stroke:#10b981,color:#fff
 ```
 
 ---
