@@ -7,7 +7,7 @@ description: Learn how to configure, spawn, and optimize specialized sub-agents 
 
 Sub-Agents are specialized AI workers that operate within isolated context windows under the direction of your primary Puku session. Rather than overloading a single conversation context with extensive file searching, test runs, or code reviews, Puku allows the primary agent to delegate focused tasks to dedicated sub-agents.
 
-![Sub-Agent Execution in Puku Editor](sub_agent_execution.png)
+![Sub-Agent Execution in Puku Editor](images/sub_agent_execution.png)
 
 
 ---
