@@ -36,9 +36,9 @@ When you request a complex task, Puku's main orchestrator delegates sub-tasks to
 
 ![Sub-Agent Workflow Sequence](images/parallel_task.png)
 
-```
 
----
+
+
 
 ## Creating Sub-Agents
 
@@ -48,7 +48,7 @@ Sub-agents can be defined either **Project-wide** (version-controlled with your 
 
 ![Sub-Agent project project directory](images/directory_tree.png)
 
-```
+
 
 * **Project-level:** Place in `.puku/agents/` at the root of your project repository.
 * **Global-level:** Place in `~/.puku/agents/` in your user home directory.
