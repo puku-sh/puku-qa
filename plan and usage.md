@@ -12,28 +12,27 @@ You can access **Plan & Usage** from **Puku Settings** .
 
 Open Puku Editor and select the **Settings** icon in the lower-left corner. 
 
+<img width="975" height="517" alt="image" src="https://github.com/user-attachments/assets/3d27873e-e5dc-4e4c-a53a-124f787cbc25" />
 
 
-<!-- Start of picture text -->
-S e<br><!-- End of picture text -->
 
 ### **2. Select Plan & Usage** 
 
 In **Puku Settings** , select **Plan & Usage** from the account section on the left. 
 
+<img width="975" height="519" alt="image" src="https://github.com/user-attachments/assets/9930fa4e-e90c-439d-b875-94aec7faef1b" />
 
 
-<!-- Start of picture text -->
-a<br>Plan & Usage<br>Pr<br>bea <<<br><!-- End of picture text -->
+
 
 ## **Understanding Your Plan** 
 
 The Plan & Usage page shows the plan currently associated with your Puku account. 
 
+<img width="975" height="519" alt="image" src="https://github.com/user-attachments/assets/a8fad7a4-fdc1-438e-b902-5235bc6475e3" />
 
 
-<!-- Start of picture text -->
-“ Plan & Usage 5<br>re<br>© vee omer<br><!-- End of picture text -->
+
 
 Depending on your account, the page includes: 
 
@@ -53,15 +52,15 @@ Depending on your account, the page includes:
 
 Usage limits based on available models: 
 
+<img width="975" height="519" alt="image" src="https://github.com/user-attachments/assets/ca2178a8-c268-418f-b9c5-2ff62dc7015b" />
 
 
-<!-- Start of picture text -->
-War<br>Plan & Usage<br>Pro<br>© rn tumge a<br>© bes Power<br><!-- End of picture text -->
 
 Usage limit and remaining usage: 
 
+<img width="975" height="515" alt="image" src="https://github.com/user-attachments/assets/74b1b707-b32e-4461-9cd0-575543410da1" />
 
 
-<!-- Start of picture text -->
-a Plan & Usage ;<br>Pro<br>© pnb ge<br>@ oa omer<br><!-- End of picture text -->
+
+
 
