@@ -36,19 +36,6 @@ The Plan & Usage page shows the plan currently associated with your Puku account
 
 Depending on your account, the page includes: 
 
-- Current plan 
-
-- Plan status 
-
-- Usage limits 
-
-- Remaining usage 
-
-- Available models 
-
-- Agent usage 
-
-- Chat usage 
 
 Usage limits based on available models: 
 
