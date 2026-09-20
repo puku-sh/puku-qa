@@ -25,7 +25,7 @@ Image Upload goes beyond text-based prompting by providing deep visual analysis 
 | **Drag and Drop** | Drag any image file directly from your local file explorer into the Puku Chat panel. |
 | **Clipboard Paste** | Copy an image to your clipboard and press `Ctrl+V` (or `Cmd+V`) inside the input box. |
 
-![File Selection Window](image/file_selection.png)
+![File Selection Window](images/file_selection.png)
 
 ---
 
@@ -33,7 +33,7 @@ Image Upload goes beyond text-based prompting by providing deep visual analysis 
 
 The updated Puku Chat panel includes dedicated controls for attaching and managing visual context alongside your code prompts, supporting models like **puku 2.8**, **puku 2.7**, and **opus 4.8**.
 
-![Puku Chat Panel Interface](image/chat_panel.png)
+![Puku Chat Panel Interface](images/chat_panel.png)
 
 ### Key Interface Elements
 
@@ -87,15 +87,15 @@ Here is how Puku processes image uploads and passes them into the multimodal AI 
 
 You can attach images while using Puku's native skill triggers (`/`) and context tags (`@`):
 
-![Skills and Context Dropdown Menu](image/skill_menu.png)
+![Skills and Context Dropdown Menu](images/skill_menu.png)
 
-![Single Image Attached Preview](image/single_image.png)
+![Single Image Attached Preview](images/single_image.png)
 
 ### 2. Multi-Image Attachments
 
 Attach multiple images in a single session to compare UI layouts, demonstrate multi-step user flows, or provide before/after screenshots for refactoring.
 
-![Multi-Image Attachment Preview](image/multi_agent.png)
+![Multi-Image Attachment Preview](images/multi_agent.png)
 
 ---
 
