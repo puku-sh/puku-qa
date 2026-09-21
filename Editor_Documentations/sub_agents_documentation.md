@@ -22,7 +22,7 @@ As projects scale, providing an AI agent with full repository context and contin
 * **Custom Model Assignment:** Assign specific models (e.g., faster models for simple tasks, highly analytical models for architecture reviews) to specific roles.
 
 Before:
-![Context Isolation Comparison](images/before.png)
+![Context Isolation Comparison](images/single_2.png)
 
 After:
 ![Context Isolation Comparison](images/after.png)
