@@ -21,11 +21,8 @@ As projects scale, providing an AI agent with full repository context and contin
 * **Parallel Execution:** Run multiple sub-agents simultaneously (e.g., code reviewer, unit test builder, and security auditor) to accelerate multi-step tasks.
 * **Custom Model Assignment:** Assign specific models (e.g., faster models for simple tasks, highly analytical models for architecture reviews) to specific roles.
 
-Before:
-![Context Isolation Comparison](images/single_2.png)
 
-After:
-![Context Isolation Comparison](images/after.png)
+![Context Isolation Comparison](images/before_after.png)
 
 
 ---
